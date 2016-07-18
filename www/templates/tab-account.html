@@ -1,0 +1,50 @@
+<!--
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <ion-toggle ng-model="settings.enableFriends" >
+        Enable Friends
+    </ion-toggle>
+    </ion-list>
+
+<div >
+  <button ng-click="chiliSpicy()">Chili</button>
+  <button ng-click="jalapenoSpicy()">Jalapeño</button>
+  <p>The food is {{spice}} spicy!</p>
+</div>
+  </ion-content>
+</ion-view>
+-->
+<ion-view view-title="Account">
+
+<ion-content ng-controller="CameraController" padding="true">
+    <button class="button button-full button-assertive" ng-click="takePhoto()">Take Photo</button>
+    <button class="button button-full button-assertive" ng-click="choosePhoto()">Choose Photo</button>
+    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+  <ion-item ng-controller="VibrationCtrl" padding="true">
+    <button class="button button-full button-assertive" ng-click="vibrate()">Vibrate</button>
+  </ion-item>
+
+<div ng-controller="ContactCtrl">
+
+  <button class="button button-full button-assertive" ng-click="getAllContacts()">getAllContacts || Add contact</button>
+ 
+<ion-list>
+    <ion-item>one</ion-item>
+    <ion-item ng-repeat="element in contacts">{{element.name}}</ion-item>
+</ion-list>
+
+
+<label class="item item-input">
+  <span class="input-label">Username</span>
+  <input type="text">
+</label>
+
+</div>
+
+
+
+
+</ion-content>
+
+</ion-view>
